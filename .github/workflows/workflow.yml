@@ -25,7 +25,7 @@ jobs:
         cache: maven
         
     - name: Running Test Automation Framework with Maven
-      run: mvn test -Dbrowse=chrome -DisLamdaTest=true -DisHeadless=false -X
+      run: mvn test -Dbrowser=chrome -DisLamdaTest=true -DisHeadless=false -X
 
 
 
