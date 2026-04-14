@@ -32,25 +32,6 @@ public abstract class BrowserUtility {
         super();
         this.driver.set(driver);  //Initialize the instance variable driver!!!!
     }
-//
-//    public BrowserUtility(String browserName){
-//        logger.info("Launching Browser " + browserName);
-//        if (browserName.equalsIgnoreCase("chrome")){
-//            driver.set( new ChromeDriver());
-//        }
-//        else if (browserName.equalsIgnoreCase("edge")) {
-//            driver.set(new EdgeDriver());
-//        }
-//        else if(browserName.equalsIgnoreCase("safari")){
-//            driver.set(new SafariDriver());
-//        }
-//        else if(browserName.equalsIgnoreCase("firefox")){
-//            driver.set(new FirefoxDriver());
-//        }
-//        else{
-//            logger.error("Invalid Browser name, Plesae select Chrome/Edge/Safari/Firefox!!!");
-//        }
-//    }
 
     public BrowserUtility(com.constants.Browser browserName, boolean isHeadless){
         logger.info("Launching Browser " + browserName);
@@ -135,7 +116,7 @@ public abstract class BrowserUtility {
         Date date = new Date();
         SimpleDateFormat format = new SimpleDateFormat("HH-mm-ss");
         String timestamp = format.format(date);
-        String path = System.getProperty("user.dir") + "//screenshots//" + name+ "_"+timestamp +".png";
+        String path = "./screenshots/" + name+ "-"+timestamp +".png";
         File screenshotFile  = new File(path);
         try {
             FileUtils.copyFile(screenshotData,screenshotFile);
