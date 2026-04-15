@@ -3,6 +3,9 @@ name: Test Automation Framework Workflow
 on:
   schedule:
     - cron: '00 18 * * *'
+    - cron: '15 04 * * *'
+    - cron: '15 16 * * *'
+    - cron: '30 01 * * 1-5'
   push:
     branches: [ "main" ]
   pull_request:
@@ -84,4 +87,4 @@ jobs:
              Hi,
              Ui Automation Framework tests has been executed. The Report has been published and the URL 
              is: https://shlok-prakash.github.io/Test-Automation-Framework/
-        attachments: public/extent-reports/index.html
+        # attachments: public/extent-reports/index.html
